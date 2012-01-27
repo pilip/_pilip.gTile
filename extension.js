@@ -59,15 +59,15 @@ function initSettings()
 {
     //Here is where you add new grid size button
     gridSettings[SETTINGS_GRID_SIZE] = [
-        new GridSettingsButton('2x2',2,2),
+//        new GridSettingsButton('2x2',2,2),
         //add directly a new button : new GridSettingsButton('2x3',2,3),
-        new GridSettingsButton('3x2',3,2),
+//        new GridSettingsButton('3x2',3,2),
         new GridSettingsButton('4x4',4,4),
         new GridSettingsButton('6x6',6,6),
     ];
     
-    //myCustomButton = new GridSettingsButton('Custom',8,8); //Going to be a 8x8 GridSettings
-    //gridSettings[SETTINGS_GRID_SIZE].push(myCustomButton);
+//    myCustomButton = new GridSettingsButton('Custom',8,8); //Going to be a 8x8 GridSettings
+//    gridSettings[SETTINGS_GRID_SIZE].push(myCustomButton);
     
      //You can change those settings to set whatever you want by default
         gridSettings[SETTINGS_AUTO_CLOSE] = false;
@@ -716,8 +716,11 @@ AutoTileMainAndList.prototype = {
         let offsetY = (isPrimaryMonitor(monitor)) ? Main.panel.actor.height : 0;
         
         let windows = getNotFocusedWindowsOfMonitor(monitor);
+        let middle = (monitor.width-(monitor.width/6));
+        let right = (monitor.width/6);
         
-        move_resize_window(focusMetaWindow,monitor.x,monitor.y+offsetY,monitor.width/2,monitor.height);
+        move_resize_window(focusMetaWindow,monitor.x,monitor.y+offsetY,middle,monitor.height);
+        
         
         let winHeight = monitor.height/(windows.length );
         let countWin = 0;
@@ -733,7 +736,7 @@ AutoTileMainAndList.prototype = {
             
             reset_window(metaWindow);
             
-            move_resize_window(metaWindow,monitor.x+monitor.width/2,monitor.y+newOffset,monitor.width/2,winHeight);
+            move_resize_window(metaWindow,monitor.x+middle,monitor.y+newOffset,right,winHeight);
             countWin++;
         }
         
