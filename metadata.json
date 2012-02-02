@@ -1,1 +1,7 @@
-{"shell-version": ["3.2"], "uuid": "gTile@_pilip", "name": "gTile", "description": "Tile your windows as you like. It even supports multiscreen ! -EDIT: - See README file for configuration -", "url" : "https://github.com/_pilip/_pilip.gTile"}
+{
+    "shell-version": ["3.2"], 
+    "uuid": "gTile@_pilip", 
+    "name": "gTile", 
+    "description": "Tile your windows as you like. It even supports multiscreen ! -EDIT: - See README file for configuration -", 
+    "url" : "https://github.com/_pilip/_pilip.gTile"
+}
