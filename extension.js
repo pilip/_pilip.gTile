@@ -60,6 +60,8 @@ function initSettings()
 //        new GridSettingsButton('3x2',3,2),
         new GridSettingsButton('4x4',4,4),
         new GridSettingsButton('6x6',6,6),
+				new GridSettingsButton('8x8',8,8),
+				new GridSettingsButton('9x9',9,9),
     ];
     
 //    myCustomButton = new GridSettingsButton('Custom',8,8); //Going to be a 8x8 GridSettings
